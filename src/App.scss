@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.dflex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  @extend .dflex;
+  height: 100vh;
+  width: 100%;
+  background: #e6e6e6;
+}
+
+.container {
+  @extend .dflex;
+  justify-content: space-between;
+  max-width: 720px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 12px 12px 0;
+    background: linear-gradient(135deg, #fd9bb0 10%, #f6416c 100%);
+    clip-path: circle(65% at right 35%);
+  }
+
+  .box.one {
+    padding: 35px 5px 0 35px;
+
+    .details {
+      .topic {
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      p {
+        color: #737373;
+        font-size: 13px;
+      }
+
+      .rating {
+        color: #fd9bb0;
+      }
+
+      .price-box {
+        margin-top: 16px;
+
+        .discount {
+          font-size: 20px;
+          color: #737373;
+          margin: 10px 0 0 12px;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100px;
+            background: #737373;
+            top: 50%;
+            left: 0;
+          }
+        }
+
+        .price {
+          color: #fc6989;
+          font-size: 30px;
+        }
+      }
+
+      .button1 {
+        margin-top: 55px;
+      }
+    }
+
+    .button1 {
+      button {
+        background-color: #00e6e6;
+        color: #fff;
+        font-size: 18px;
+        outline: none;
+        padding: 8px 16px;
+        margin-top: 4px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.12);
+        }
+      }
+    }
+  }
+
+  .box.two {
+    .image {
+      height: 340px;
+      width: 430px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .image-box {
+      position: relative;
+      text-align: right;
+      right: 0;
+      bottom: 32px;
+    }
+
+    .info {
+      margin: 0 35px 0 0;
+
+      .brand {
+        font-size: 17px;
+        font-weight: 600;
+        color: #c9032e;
+      }
+
+      .name {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+      }
+
+      .shipping {
+        font-size: 14px;
+        font-weight: 400;
+        color: #000;
+      }
+
+      .button2 {
+        margin: 17px 0;
+
+        button {
+          outline: none;
+          border: 1px solid #fff;
+          padding: 8px 16px;
+          // color: #fff;
+          font-size: 15px;
+          font-weight: 400;
+          cursor: pointer;
+          background: transparent;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
