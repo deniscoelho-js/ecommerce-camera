@@ -1,4 +1,4 @@
-# Sign Up Screen
+# Ecommerce Card Camera
 
 <h1>
 	<img src="public/images/site.png" width="100%" />
